@@ -12,7 +12,7 @@ First and foremost, welcome to the project briefing. We will be focusing on:
 
 For this project we will be aiming towards a modern, optimized and brand wide consistent web identity for your business. Our objective should be to have a cohesive mass that works well for both your clients and your business. Nowadays a brand's web identity is becoming more and more important. It's of the essence to get _and_ maintain a solid website, when everybody uses their personal devices to browse the web, and thus also your website.
 
-From now on I will refer to the process as the **_Development phase_**.
+From now on I will refer to the process as the **development phase**.
 
 ## Development phase
 
@@ -34,7 +34,7 @@ The first part of the **development phase**. Here we will be focusing on laying 
 
 #### 4. Creating clickable mockups
 
->As you may have noticed, we have finished the "first" part of the **development phase**. Now that we have actually made the redesign we are ready to start building it.
+>As you may have noticed, we have now finished the "first" part of the **development phase**. Now that we have actually made the redesign we are ready to start building it.
 
 #### 5. Set up of the GitHub repository and main project hierarchy
 
