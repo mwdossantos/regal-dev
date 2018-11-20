@@ -16,11 +16,15 @@ From now on I will refer to the process as the **_Development phase_**.
 
 ## Development phase
 
-In our development phase we will go through all the different sections of creating your brand's website. We're talking about wireframing, clickable mockups and for example the choice of framework we will be using for the project. Every part of the development phase will be thoroughly explained and documented beneath.
+In our **development phase** we will go through all the different sections of creating your brand's website. We're talking about wireframing, clickable mockups and for example the choice of framework we will be using for the project. Every part of the development phase will be thoroughly explained and documented beneath.
 
 ### Designing the project
 
+The first part of the **development phase**. Here we will be focusing on laying the foundation for the website with navigational architecture, design and animations.
+
 ---
+
+#### 0. What pages do we need?
 
 #### 1. Wireframing for all pages
 
@@ -30,7 +34,7 @@ In our development phase we will go through all the different sections of creati
 
 #### 4. Creating a clickable mockup
 
->As you may have noticed, we have finished the "first" part of the development phase. Now that we have actually made the redesign we are ready to start building it.
+>As you may have noticed, we have finished the "first" part of the **development phase**. Now that we have actually made the redesign we are ready to start building it.
 
 #### 5. Set up of the GitHub repository and main project hierarchy
 
