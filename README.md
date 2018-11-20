@@ -32,13 +32,13 @@ The first part of the **development phase**. Here we will be focusing on laying 
 
 #### 3. Redesign of all pages using the consistency of the styleguide
 
-#### 4. Creating a clickable mockup
+#### 4. Creating clickable mockups
 
 >As you may have noticed, we have finished the "first" part of the **development phase**. Now that we have actually made the redesign we are ready to start building it.
 
 #### 5. Set up of the GitHub repository and main project hierarchy
 
-#### 6. Set uo a (scalable) framework I will use to build the website
+#### 6. Set up a (scalable) framework I will use to build the website
 
 #### 7. Build all pages based on the mockups
 
@@ -46,4 +46,4 @@ The first part of the **development phase**. Here we will be focusing on laying 
 
 #### 9. Finalize the repo and make it ready to deploy
 
-#### 10. Hosting the deployed website
+#### 10. Hosting and  maintaining the deployed website
