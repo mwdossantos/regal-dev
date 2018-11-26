@@ -1,0 +1,24 @@
+header {
+  height: 73px;
+  background-color: white;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.left-header-container {
+  height: 100%;
+}
+
+.left-header-container img {
+  height: 100%;
+}
+
+.right-header-container {
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

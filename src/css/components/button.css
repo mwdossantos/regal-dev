@@ -1,0 +1,18 @@
+.button {
+  padding: 12px;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 37px 0 rgba(0,168,231,0.30);
+}
+
+.button:active {
+  transform: translateY(0px);
+  filter: brightness(0.8);
+  box-shadow: 0 0 37px 0 rgba(0,168,231,0);
+}
