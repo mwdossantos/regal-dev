@@ -35,13 +35,7 @@
   margin-bottom: 10px;
 }
 
-.block-shop-image {
-  background-image: url('../shop.png');
-}
 
-.block-partners-image {
-  background-image: url('../partners.jpg');
-}
 
 .grow-2 {
   flex-grow: 2;
