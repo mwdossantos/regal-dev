@@ -19,7 +19,7 @@
   background-image: url('../fortnite.png');
 }
 
-.team {
+.team-img {
   background-image: url('../team.jpg');
 }
 
@@ -33,7 +33,7 @@
 
 .swiper-pagination-bullet-active {
   opacity: 1!important;
-  background-color: #00A8E7!important;
+  background-color: white!important;
 }
 
 .swiper-button-next {

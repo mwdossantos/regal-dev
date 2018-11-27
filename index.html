@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/components/main.css" type="text/css">
     <link rel="stylesheet" href="css/components/footer.css" type="text/css">
     <link rel="stylesheet" href="css/components/button.css" type="text/css">
+    <link rel="stylesheet" href="css/components/block.css" type="text/css">
     <link rel="stylesheet" href="css/components/swiper-custom.css" type="text/css">
     <link rel="stylesheet" href="css/components/twitch.css" type="text/css">
 
@@ -27,11 +28,12 @@
           <img src="css/logo.png" alt="logo">
         </div>
         <div class="right-header-container">
-          <div class="navigation-link">News</div>
-          <div class="navigation-link">Team</div>
-          <div class="navigation-link">Store</div>
-          <div class="navigation-link">Staff</div>
-          <div class="navigation-link">Partners</div>
+          <div class="navigation-link home active">Home</div>
+          <div class="navigation-link news">News</div>
+          <div class="navigation-link team">Team</div>
+          <div class="navigation-link store">Store</div>
+          <div class="navigation-link staff">Staff</div>
+          <div class="navigation-link partners">Partners</div>
           <div class="divider"></div>
           <div class="button regal-blue">
             Contact us
@@ -53,7 +55,7 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="swiper-slide-container team">
+                <div class="swiper-slide-container team-img">
                   <p class="swiper-title">Meet the team</p>
                   <div class="button regal-blue">Read more</div>
                 </div>
@@ -88,6 +90,8 @@
 
       <!-- twitch stream -->
 
+      <h2 class="white twitch-title">See us live</h2>
+
       <!-- Add a placeholder for the Twitch embed -->
       <div id="twitch-embed" class="iframe-container"></div>
     </main>
@@ -110,8 +114,45 @@
 
     <!-- Load the Twitch embed script -->
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+            channel: "regalreserve",
+            layout: "video",
+            autoplay: false
+          });
+    </script>
 
+    <!-- jQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Swiper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+    <script type="text/javascript">
+      var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        autoplay: true,
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      })
+    </script>
+
+    <!-- Custom js -->
     <script type="text/javascript" src="js/global.js"></script>
   </body>
 </html>

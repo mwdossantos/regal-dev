@@ -1,39 +1,30 @@
 (function() {
    // our page initialization code here
    // the DOM will be available here
-   init();
-   twitch();
+   listener();
 })();
 
-function init() {
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: false,
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+function listener() {
+  $('.home').click(function() {
+    navigator('index.html');
+  })
+  $('.news').click(function() {
+    navigator('news.html');
+  })
+  $('.team').click(function() {
+    navigator('team.html');
+  })
+  $('.store').click(function() {
+    navigator('store.html');
+  })
+  $('.staff').click(function() {
+    navigator('staff.html');
+  })
+  $('.partners').click(function() {
+    navigator('partners.html');
   })
 }
 
-function twitch() {
-  new Twitch.Embed("twitch-embed", {
-        channel: "regalreserve",
-        layout: "video",
-        autoplay: false
-      });
-
+function navigator(destination) {
+  window.location.href = destination;
 }

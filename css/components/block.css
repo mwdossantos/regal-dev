@@ -1,0 +1,48 @@
+.block-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block {
+  padding: 20px;
+  border-radius: 7px;
+  height: 230;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.2s ease;
+}
+
+.block:hover {
+  transform: translateY(-5px);
+}
+
+.block-align-left {
+  align-items: flex-start;
+}
+
+.block-align-right {
+  align-items: flex-end;
+}
+
+.block-title {
+  font-size: 28px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.block-shop-image {
+  background-image: url('../shop.png');
+}
+
+.block-partners-image {
+  background-image: url('../partners.jpg');
+}
+
+.grow-2 {
+  flex-grow: 2;
+}
