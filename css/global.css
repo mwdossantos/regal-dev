@@ -71,3 +71,15 @@ body {
 .grow-4 {
   flex-grow: 4;
 }
+
+.twitter-member {
+  background-image: url('twitter.png');
+}
+
+.mail-member {
+  background-image: url('mail.png');
+}
+
+.yt-member {
+  background-image: url('yt.png');
+}

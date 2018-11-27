@@ -1,5 +1,5 @@
-.team-row {
-
+.team-row .dots {
+  margin: 20px 0px 10px 0px;
 }
 
 .team-item {
@@ -20,4 +20,63 @@
 
 .team-item:hover {
   transform: translateY(-5px);
+}
+
+.team-member-holder {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-member-container {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.team-member {
+  background-size: cover;
+  background-position: center;
+  border-radius: 7px;
+  height: 230px;
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.social-icon-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+.social-icon-team-member {
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-position: center;
+  background-size: 75%;
+  background-repeat: no-repeat;
+}
+
+.social-icon-team-member:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.5);
+}
+
+.social-icon-team-member:active {
+  transform: translateY(0px);
+  filter: brightness(0.8);
+}
+
+.team-member-username {
+  font-size: 14px;
+  opacity: 0.5;
 }
