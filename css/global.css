@@ -37,7 +37,7 @@ body {
 
 .navigation-link:hover {
   color: #00A8E7;
-  filter: brightness(1.2);
+  filter: brightness(1.5);
   transform: translateY(-3px);
 }
 
