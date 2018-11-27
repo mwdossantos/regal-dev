@@ -1,5 +1,5 @@
 .block-shop-image {
-  background-image: url('shop.png');
+  background-image: url('shop.jpg');
 }
 
 .block-partners-image {
@@ -10,18 +10,18 @@
   background-image: url('fortnite.png');
 }
 
+.fortnite-2 {
+  background-image: url('fortnite-art.jpg');
+}
+
 .teamwin {
   background-image: url('news.JPG');
 }
 
 .regal {
-  background-image: url('regal.png');
+  background-image: url('news.JPG');
 }
 
 .csgo {
   background-image: url('csgo-art.jpg');
-}
-
-.fortnite {
-  background-image: url('fortnite-art.jpg');
 }

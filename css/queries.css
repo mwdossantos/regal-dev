@@ -5,10 +5,10 @@
     margin: 0 auto;
   }
 
-@media screen and (min-width: 800px) and (max-width: 1024px) {
+@media screen and (min-width: 890px) and (max-width: 1024px) {
   /* normal css */
 }
 
-@media screen and (min-width: 375px) and (max-width: 800px) {
+@media screen and (min-width: 375px) and (max-width: 890px) {
   /* mobile and tablet css */
 }
