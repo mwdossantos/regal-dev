@@ -1,0 +1,13 @@
+.team-item {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.team-item:hover {
+  filter: brightness(1.5);
+}
+
+.team-item:active {
+  filter: brightness(0.8);
+  transform: translateY(0px);
+}
