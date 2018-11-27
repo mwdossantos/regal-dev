@@ -24,10 +24,6 @@
   border-radius: 7px;
 }
 
-.news-title {
-  font-style: italic;
-}
-
 .news-date {
   margin: 20px 0px 10px 0px;
   font-size: 12px;
@@ -42,8 +38,9 @@
 }
 
 .news-text {
-  opacity: 0.3;
+  opacity: 1;
   line-height: 30px;
+  font-weight: 400;
 }
 
 .news-row .dots {

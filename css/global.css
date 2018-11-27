@@ -37,6 +37,7 @@ body {
 
 .navigation-link:hover {
   color: #00A8E7;
+  filter: brightness(1.2);
   transform: translateY(-3px);
 }
 
@@ -51,6 +52,10 @@ body {
 
 .blank-divider {
   margin: 0px 10px;
+}
+
+.blank-divider-horizontal {
+  margin: 20px 0px;
 }
 
 .fader {

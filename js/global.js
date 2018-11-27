@@ -6,25 +6,35 @@
 
 function listener() {
   $('.home').click(function() {
-    navigator('index.html');
+    navigator('index.html',"_self");
   })
   $('.news').click(function() {
-    navigator('news.html');
+    navigator('news.html',"_self");
   })
   $('.team').click(function() {
-    navigator('team.html');
+    navigator('team.html',"_self");
   })
   $('.store').click(function() {
-    navigator('store.html');
+    navigator('store.html',"_self");
   })
   $('.staff').click(function() {
-    navigator('staff.html');
+    navigator('staff.html',"_self");
   })
   $('.partners').click(function() {
-    navigator('partners.html');
+    navigator('partners.html',"_self");
+  })
+
+  $('.twitter').click(function() {
+    navigator('https://twitter.com/RegalReserveLLC','_blank');
+  })
+  $('.mail').click(function() {
+    navigator('mailto:andrew@theregalreserve.co', "_self");
+  })
+  $('.yt').click(function() {
+    navigator('https://www.youtube.com/user/teamAeRa','_blank');
   })
 }
 
-function navigator(destination) {
-  window.location.href = destination;
+function navigator(destination, where) {
+  window.open(destination, where);
 }
