@@ -38,10 +38,12 @@
 
 .swiper-button-next:hover {
   transform: scale(1.1);
+  filter: brightness(1.5);
 }
 
 .swiper-button-next:active {
   transform: scale(1);
+  filter: brightness(0.8);
 }
 
 .swiper-button-prev {
@@ -55,8 +57,10 @@
 
 .swiper-button-prev:hover {
   transform: scale(1.1);
+  filter: brightness(1.5);
 }
 
 .swiper-button-prev:active {
   transform: scale(1);
+  filter: brightness(0.8);
 }
