@@ -2,6 +2,7 @@
    // our page initialization code here
    // the DOM will be available here
    init();
+   twitch();
 })();
 
 function init() {
@@ -26,4 +27,13 @@ function init() {
       el: '.swiper-scrollbar',
     },
   })
+}
+
+function twitch() {
+  new Twitch.Embed("twitch-embed", {
+        channel: "regalreserve",
+        layout: "video",
+        autoplay: false
+      });
+
 }

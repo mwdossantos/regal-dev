@@ -5,12 +5,16 @@
     <title>Regal Reserve LLC</title>
     <link rel="stylesheet" href="css/colors.css" type="text/css">
     <link rel="stylesheet" href="css/global.css" type="text/css">
+    <link rel="stylesheet" href="css/queries.css" type="text/css">
 
     <!-- Components -->
 
     <link rel="stylesheet" href="css/components/header.css" type="text/css">
     <link rel="stylesheet" href="css/components/main.css" type="text/css">
+    <link rel="stylesheet" href="css/components/footer.css" type="text/css">
     <link rel="stylesheet" href="css/components/button.css" type="text/css">
+    <link rel="stylesheet" href="css/components/swiper-custom.css" type="text/css">
+    <link rel="stylesheet" href="css/components/twitch.css" type="text/css">
 
     <!-- API's -->
 
@@ -37,7 +41,7 @@
 
     <main>
 
-      <!-- Slider main container -->
+      <!-- Swiper -->
       <div class="swiper-container">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
@@ -62,17 +66,50 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
       </div>
-      <!-- Main slider -->
 
       <!-- Blocks -->
+      <div class="block-row">
+        <div class="block block-align-left block-shop-image grow-2">
+          <div class="block-text black">
+            <p class="block-title">Dress like the best</p>
+            <p class="block-subtitle">Shop our latest apparel</p>
+          </div>
+          <div class="button regal-blue">Shop now</div>
+        </div>
+        <div class="blank-divider"></div>
+        <div class="block block-align-right block-partners-image ">
+          <div class="block-text white">
+            <p class="block-title">Our partners</p>
+            <p class="block-subtitle">See what keeps us running</p>
+          </div>
+          <div class="button regal-blue">Read more</div>
+        </div>
+      </div>
 
       <!-- twitch stream -->
 
+      <!-- Add a placeholder for the Twitch embed -->
+      <div id="twitch-embed" class="iframe-container"></div>
     </main>
 
     <footer>
-
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <img class="logo-text" src="css/logo_text.png" alt="logo">
+      <p class="white">We are Gaming. We are Royal. We are Regal.</p>
+      <div class="horizontal-divider"></div>
+      <div class="socials">
+        <img src="css/twitter.png" class="social-icon" alt="social-icon">
+        <img src="css/mail.png" class="social-icon" alt="social-icon">
+        <img src="css/yt.png" class="social-icon" alt="social-icon">
+      </div>
     </footer>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
