@@ -15,10 +15,17 @@
   background-size: cover;
   background-position: center;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .block:hover {
+  filter: brightness(1.5);
   transform: translateY(-5px);
+}
+
+.block:active {
+  filter: brightness(0.8);
+  transform: translateY(0px);
 }
 
 .block-align-left {

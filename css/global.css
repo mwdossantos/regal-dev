@@ -65,11 +65,11 @@ body {
 }
 
 .grow-2 {
-  flex-grow: 2;
+  flex-grow: 2!important;
 }
 
 .grow-4 {
-  flex-grow: 4;
+  flex-grow: 4!important;
 }
 
 .twitter-member {
@@ -82,4 +82,10 @@ body {
 
 .yt-member {
   background-image: url('yt.png');
+}
+
+.big-title {
+  font-style: italic;
+  margin: 20px auto;
+  text-align: center;
 }

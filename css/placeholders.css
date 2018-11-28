@@ -1,7 +1,3 @@
-.block-shop-image {
-  background-image: url('shop.jpg');
-}
-
 .block-partners-image {
   background-image: url('partners.jpg');
 }
@@ -52,4 +48,16 @@
 
 .perform {
   background-image: url('perform-art.jpg');
+}
+
+.promo-img {
+  background-image: url('clothing.jpg');
+}
+
+.hoodie2 {
+  background-image: url('clothing2.jpg');
+}
+
+.hoodie {
+  background-image: url('clothing.jpg');
 }

@@ -1,0 +1,66 @@
+.promo-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo {
+  padding: 20px;
+  border-radius: 7px;
+  height: 230;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.2s ease;
+}
+
+.store-items-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.store-item-container {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.store-card {
+  height: 280px;
+  border-radius: 7px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.store-card:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.5);
+}
+
+.store-card:active {
+  transform: translateY(0px);
+  filter: brightness(0.8);
+}
+
+.store-card .button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  left: 20px;
+
+}
+
+.store-card-title {
+
+}
+
+.store-card-price {
+  font-size: 14px;
+  opacity: 0.5;
+}
