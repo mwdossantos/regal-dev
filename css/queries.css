@@ -20,11 +20,15 @@
   }
 
   .mobile-edit .store-item-container .store-card {
-    width: 250px;
+    min-width: 250px;
   }
 
   header {
     padding-right: 20px;
+  }
+
+  .swipe-helper {
+    display: block!important;
   }
 
   .right-header-container {
@@ -43,7 +47,7 @@
 
 
   .team-member {
-    width: 250px;
+    min-width: 250px;
   }
 }
 

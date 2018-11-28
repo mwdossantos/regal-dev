@@ -13,6 +13,18 @@ header {
   box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.3);
 }
 
+.swipe-helper {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  background-color: white;
+  border-radius: 200px;
+
+}
+
 .left-header-container {
   cursor: pointer;
   height: 100%;
