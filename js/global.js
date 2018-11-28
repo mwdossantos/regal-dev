@@ -124,12 +124,11 @@ function animations() {
     origin: 'bottom',
   });
 
-  ScrollReveal().reveal('.team-member-container', {
-    delay: 600,
-    interval:300,
-    distance: '100px',
-    origin: 'bottom',
-  });
+  // ScrollReveal().reveal('.team-member-container', {
+  //   interval:300,
+  //   distance: '100px',
+  //   origin: 'bottom',
+  // });
 
   //news animations
 

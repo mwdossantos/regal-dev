@@ -1,3 +1,52 @@
+@media screen and (min-width: 375px) and (max-width: 890px) {
+  /* mobile and tablet css */
+  .block-row {
+    flex-direction: column;
+    align-items: initial!important;
+  }
+
+  .blank-divider {
+    margin: 10px 10px;
+  }
+
+  .swiper-title {
+    font-size: 18px!important;
+  }
+
+  .mobile-edit {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  .mobile-edit .store-item-container .store-card {
+    width: 250px;
+  }
+
+  header {
+    padding-right: 20px;
+  }
+
+  .right-header-container {
+    justify-content: initial!important;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  .right-header-container .divider {
+    display: none!important;
+  }
+
+  .right-header-container .button {
+    margin-left: 30px;
+  }
+
+
+  .team-member {
+    width: 250px;
+  }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 6000px) {
   /* large screens */
   body {
@@ -7,8 +56,4 @@
 
 @media screen and (min-width: 890px) and (max-width: 1024px) {
   /* normal css */
-}
-
-@media screen and (min-width: 375px) and (max-width: 890px) {
-  /* mobile and tablet css */
 }

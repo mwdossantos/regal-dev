@@ -29,6 +29,10 @@ body {
   opacity: 0.3;
 }
 
+.team-title {
+  text-align: center;
+}
+
 .navigation-link {
   margin-left: 30px;
   transition: all 0.2s ease;
