@@ -35,6 +35,7 @@
     justify-content: initial!important;
     overflow-x: scroll;
     white-space: nowrap;
+    height: 100%;
   }
 
   .right-header-container .divider {
