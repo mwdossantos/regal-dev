@@ -7,22 +7,22 @@
 
 function listener() {
   $('.home').click(function() {
-    navigator('index.html',"_self");
+    navigator('index.php',"_self");
   })
   $('.news').click(function() {
-    navigator('news.html',"_self");
+    navigator('news.php',"_self");
   })
   $('.team').click(function() {
-    navigator('team.html',"_self");
+    navigator('team.php',"_self");
   })
   $('.store').click(function() {
-    navigator('store.html',"_self");
+    navigator('store.php',"_self");
   })
   $('.staff').click(function() {
-    navigator('staff.html',"_self");
+    navigator('staff.php',"_self");
   })
   $('.partners').click(function() {
-    navigator('partners.html',"_self");
+    navigator('partners.php',"_self");
   })
 
   $('.twitter').click(function() {

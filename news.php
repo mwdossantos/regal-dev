@@ -45,25 +45,9 @@
     <main>
 
       <!-- News -->
-      <div class="news-row">
-        <div class="news-item">
-          <div class="news-image teamwin"></div>
-          <div class="news-content">
-            <h2 class="news-title">This is a news item!</h2>
-            <div class="news-divider"></div>
-            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <img src="css/team.jpg" class="news-content-image" alt="team">
-            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p class="news-date">28th of November, 2018</p>
-            <p class="news-author">Written by Max Wood</p>
-          </div>
-        </div>
+      <?php require_once 'includes/getNews.php'; ?>
 
-        <!-- <div class="dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div> -->
+
 
     </main>
 
