@@ -4,7 +4,7 @@ Nice to have you here! Check out our [Wiki](https://github.com/mwdossantos/regal
 
 ## CMS branch
 
-Please use the `cms-branch` for all pushes from now on, as I don't want to mess up the front end. 
+Please use the `cms-branch` for all pushes from now on, as I don't want to mess up the front end. After we can always merge the two if it works.
 
 ## Live website up till now
 
