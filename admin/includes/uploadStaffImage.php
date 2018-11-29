@@ -1,17 +1,11 @@
 <?php
-$path = "../../teamImages/members/";
+$path = "../../staffImages/";
 include 'chromeLogger.php';
 
-$teamsFile = "../../data/teams.json";
-$jsondata = file_get_contents($teamsFile);
-
-$gameName = $_POST['gameName'];
-$memberName = $_POST['name'];
-$imageName = str_replace(" ","",$memberName);
-$twitterHandle = $_POST['twitterHandle'];
-$emailHandle = $_POST['emailHandle'];
-$youtubeHandle = $_POST['youtubeHandle'];
-
+$staffsFile = "../../data/staffs.json";
+$jsondata = file_get_contents($staffsFile);
+$nameGiven = $_POST['name'];
+$imageName = str_replace(" ","",$nameGiven);
 $valid_formats = array(
     "jpg",
     "png",
@@ -35,29 +29,24 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
                 if (move_uploaded_file($tmp, $path . $actual_image_name)) {
 
                     // converts json data into array
-                    $teamsData = json_decode($jsondata);
+                    $staffsData = json_decode($jsondata);
 
                     // Create the article object
-                    $member = (object) [
-                        'name' => $memberName,
+                    $staff = (object) [
+                        'title' => $nameGiven,
                         'image' => $actual_image_name,
-                        'twitterHandle' => $twitterHandle,
-                        'emailHandle' => $emailHandle,
-                        'youtubeHandle' => $youtubeHandle
+                        'members' => (array) []
                     ];
 
-                    foreach ($teamsData->teams as $team) {
-                        # code...
-                        if ($gameName == $team->title) {
-                            array_push($team->members, $member);
-                        }
-                    }
-                    // Push the new article to the array
+                    ChromePhp::Log($staff);
 
-                    $jsondata = json_encode($teamsData, JSON_PRETTY_PRINT);
+                    // Push the new article to the array
+                    array_push($staffsData->staffs, $staff);
+
+                    $jsondata = json_encode($staffsData, JSON_PRETTY_PRINT);
 	   
                     //write json data into data.json file
-                    if(file_put_contents($teamsFile, $jsondata)) {
+                    if(file_put_contents($staffsFile, $jsondata)) {
                          echo true;
                     } else {
                         echo "Image could not be uploaded.";

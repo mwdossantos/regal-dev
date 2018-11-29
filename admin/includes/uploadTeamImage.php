@@ -5,6 +5,7 @@ include 'chromeLogger.php';
 $teamsFile = "../../data/teams.json";
 $jsondata = file_get_contents($teamsFile);
 $nameGiven = $_POST['name'];
+$imageName = str_replace(" ","",$nameGiven);
 $valid_formats = array(
     "jpg",
     "png",
@@ -23,7 +24,7 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
         list($txt, $ext) = explode(".", $name);
         if (in_array($ext, $valid_formats)) {
 
-                $actual_image_name = $nameGiven . "." . $ext;
+                $actual_image_name = $imageName . "." . $ext;
                 $tmp = $_FILES['file']['tmp_name'];
                 if (move_uploaded_file($tmp, $path . $actual_image_name)) {
 
@@ -34,6 +35,7 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
                     $team = (object) [
                         'title' => $nameGiven,
                         'image' => $actual_image_name,
+                        'logo' => "",
                         'members' => (array) [
 
                         ]

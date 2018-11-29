@@ -1,17 +1,11 @@
 <?php
-$path = "../../teamImages/members/";
+$path = "../../teamImages/logos/";
 include 'chromeLogger.php';
 
 $teamsFile = "../../data/teams.json";
 $jsondata = file_get_contents($teamsFile);
-
-$gameName = $_POST['gameName'];
-$memberName = $_POST['name'];
-$imageName = str_replace(" ","",$memberName);
-$twitterHandle = $_POST['twitterHandle'];
-$emailHandle = $_POST['emailHandle'];
-$youtubeHandle = $_POST['youtubeHandle'];
-
+$nameGiven = $_POST['name'];
+$imageName = str_replace(" ","",$nameGiven);
 $valid_formats = array(
     "jpg",
     "png",
@@ -37,22 +31,12 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
                     // converts json data into array
                     $teamsData = json_decode($jsondata);
 
-                    // Create the article object
-                    $member = (object) [
-                        'name' => $memberName,
-                        'image' => $actual_image_name,
-                        'twitterHandle' => $twitterHandle,
-                        'emailHandle' => $emailHandle,
-                        'youtubeHandle' => $youtubeHandle
-                    ];
 
                     foreach ($teamsData->teams as $team) {
-                        # code...
-                        if ($gameName == $team->title) {
-                            array_push($team->members, $member);
+                        if ($team->title == $nameGiven) {
+                            $team->logo = $actual_image_name;
                         }
                     }
-                    // Push the new article to the array
 
                     $jsondata = json_encode($teamsData, JSON_PRETTY_PRINT);
 	   

@@ -18,6 +18,7 @@
         <a href="index.php">Home</a>
         <a href="news.php">News</a>
         <a href="team.php">Team</a>
+        <a href="staff.php">Staff</a>
     </nav>
 
     <div style="display: flex; flex-direction: column; width: 60%;">

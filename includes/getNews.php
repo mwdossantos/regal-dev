@@ -15,7 +15,7 @@
         $newsHTML .= '<h2 class="news-title">There is currently no news.</h2>';
         $newsHTML .= '</div></div></div>';
     } else {
-        foreach ($newsData->articles as $newsItem) {
+        foreach ($newsData->articles as $key => $newsItem) {
 
             if ($newsItem->public == true) {
     
@@ -46,13 +46,16 @@
     
                 // Divider 
     
-                $newsHTML .= '
+                if ((count($newsData->articles) - 1) == $key) {
+    
+                } else {
+                    $newsHTML .= '
                     <div class="dots">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                ';
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    </div>';
+                }
             }
     
         }

@@ -23,9 +23,9 @@ $(document).ready(function() {
           console.log('Callback: Plugin initialized');
         },
         onUploadComplete: function () {
-            $('#image-name').val("");
             $('#uploaded-images-div').show('fast');
             $('#uploaded-images').append("<li>"+$('#image-name').val()+"</li>");
+            $('#image-name').val("");
         },
         onUploadError: function () {
             alert("Upload failed");
