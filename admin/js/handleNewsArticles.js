@@ -23,6 +23,7 @@ $(document).ready(function() {
           console.log('Callback: Plugin initialized');
         },
         onUploadComplete: function () {
+            $('#image-name').val("");
             $('#uploaded-images-div').show('fast');
             $('#uploaded-images').append("<li>"+$('#image-name').val()+"</li>");
         },
@@ -49,8 +50,8 @@ $(document).ready(function() {
         indentWithTabs: true,
         insertTexts: {
             horizontalRule: ["", "\n\n-----\n\n"],
-            image: ["img*PutImageNameHere", "*img"],
-            link: ["url*http://", "*url[]"],
+            image: ["img[PutImageNameHere", "]img"],
+            link: ["[", "](http://)"],
             table: ["", "\n\n| Column 1 | Column 2 | Column 3 |\n| -------- | -------- | -------- |\n| Text     | Text      | Text     |\n\n"],
         },
         lineWrapping: false,
@@ -74,3 +75,34 @@ $(document).ready(function() {
 
 
 }); 
+
+
+function saveNewsArticle () {
+    const title = $('#news-title').val();
+    const public = $('#news-privacy').val();
+    const body = $('#news-body').val();
+    const author = $('#news-author').val();
+
+    if (title == ""|| public == "" || body == ""|| author == "") {
+        return alert("Please make sure you filled in all fields");
+    }
+
+    $.ajax({
+         type: "POST",
+         url: 'includes/saveNewsArticle.php',
+         data: {
+           title: title,
+           body: body,
+           author: author,
+           public: public
+         },
+         success:function(data) {
+            if (data == 1) {
+                location.reload();
+            } else {
+                alert("Something went wrong, please check if you filled in all fields.");
+            }
+         }
+    });
+    
+}

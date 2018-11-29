@@ -17,6 +17,7 @@
     <nav>
         <a href="index.php">Home</a>
         <a href="news.php">News</a>
+        <a href="team.php">Team</a>
     </nav>
 
     <div style="display: flex; flex-direction: column; width: 60%;">
@@ -41,6 +42,11 @@
         <!--BODY-->
         <textarea id="news-body" cols="30" rows="10" placeholder="Article"></textarea>
 
+        <br>
+        <!--AITHOR-->
+        <input id="news-author" type="text" placeholder="Author">
+        <br>
+        
         <!--PRIVACY-->
         <p>Public?</p>
         <select id="news-privacy">
