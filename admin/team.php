@@ -1,3 +1,7 @@
+<?php 
+    require 'includes/checkSession.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +13,7 @@
     <script src="js/fileUploader.js"></script>
     <script src="js/handleTeams.js"></script>
     <!-- Include the required files -->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
@@ -19,6 +24,8 @@
         <a href="news.php">News</a>
         <a href="team.php">Team</a>
         <a href="staff.php">Staff</a>
+        <a href="store.php">Store</a>
+        <a href="partners.php">Partners</a>
     </nav>
 
     <div style="display: flex; padding: 10px; flex-direction: column; width: 60%; border: 1px solid black; margin: 10px;">
@@ -46,10 +53,16 @@
 
     <div style="display: flex; padding: 10px; flex-direction: column; width: 60%; border: 1px solid black; margin: 10px;">
         <?php require_once 'includes/getNewMember.php';?>
-        
+    </div>
 
+    <div style="display: flex; flex-direction: column; width: 60%;">
+        <h3>Delete teams</h3>
+        <?php require_once 'includes/getTeams.php'; ?>
+    </div>
 
-
+    <div style="display: flex; flex-direction: column; width: 60%;">
+        <h3>Delete team members</h3>
+        <?php require_once 'includes/getTeamMembers.php'; ?>
     </div>
 </body>
 </html>

@@ -5,7 +5,7 @@
     $staffFile = "data/staffs.json";
     $jsondata = file_get_contents($staffFile);
     $staffData = json_decode($jsondata);
-    $staffHTML;
+    $staffHTML = "";
 
     if (empty($staffData->staffs)) {
         // Start building up the HTML

@@ -18,7 +18,7 @@ $(document).ready(function() {
               "name": $('#image-name').val()
             };
         },
-        extFilter: ["jpg", "jpeg", "png", "gif"],
+        extFilter: ["jpg", "jpeg", "png", "gif", "JPG", "JPEG", "PNG", "GIF"],
         onInit: function(){
           console.log('Callback: Plugin initialized');
         },
@@ -82,6 +82,7 @@ function saveNewsArticle () {
     const public = $('#news-privacy').val();
     const body = $('#news-body').val();
     const author = $('#news-author').val();
+    const headlineImage = $('#news-headlineImage').val();
 
     if (title == ""|| public == "" || body == ""|| author == "") {
         return alert("Please make sure you filled in all fields");
@@ -94,7 +95,8 @@ function saveNewsArticle () {
            title: title,
            body: body,
            author: author,
-           public: public
+           public: public,
+           headlineImage: headlineImage
          },
          success:function(data) {
             if (data == 1) {
@@ -105,4 +107,23 @@ function saveNewsArticle () {
          }
     });
     
+}
+
+
+function deleteArticle(id) {
+
+    $.ajax({
+         type: "POST",
+         url: 'includes/deleteNews.php',
+         data: {
+           id: id,
+         },
+         success:function(data) {
+            if (data == 1) {
+                location.reload();
+            } else {
+                alert("Something went wrong, please check if you filled in all fields.");
+            }
+         }
+    });
 }

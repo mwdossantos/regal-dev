@@ -24,17 +24,7 @@ function listener() {
   $('.partners').click(function() {
     navigator('partners.php',"_self");
   })
-
-  $('.twitter').click(function() {
-    navigator('https://twitter.com/RegalReserveLLC','_blank');
-  })
-  $('.mail').click(function() {
-    navigator('mailto:andrew@theregalreserve.co', "_self");
-  })
-  $('.yt').click(function() {
-    navigator('https://www.youtube.com/user/teamAeRa','_blank');
-  })
-
+  
   $('.aporia').click(function() {
     navigator('https://aporiacustoms.com/','_blank');
   })

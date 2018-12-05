@@ -5,12 +5,11 @@
     $teamFile = "data/teams.json";
     $jsondata = file_get_contents($teamFile);
     $teamData = json_decode($jsondata);
-    $teamHTML;
+    $teamHTML = "";
 
     if (empty($teamData->teams)) {
-        // Start building up the HTML
-        // Empty roster
-        // PUT SOME STUFF HERE
+        $teamHTML .= '<h2 style="color: white">There are no teams</h2>';
+
     } else {
 
         $teamHTML .= '<div class="team-row"><div class="team-container">';

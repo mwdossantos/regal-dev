@@ -50,18 +50,8 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="swiper-slide-container fortnite">
-                  <p class="swiper-title">Fortnite Season 6 - Our Journey</p>
-                  <div class="button regal-blue">Read more</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="swiper-slide-container regal">
-                  <p class="swiper-title">Meet the team</p>
-                  <div class="button regal-blue">Read more</div>
-                </div>
-              </div>
+            <?php require_once 'includes/getRecentNews.php'; ?>
+
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
@@ -72,23 +62,8 @@
       </div>
 
       <!-- Blocks -->
-      <div class="block-row">
-        <div class="block block-align-left store hoodie grow-2">
-          <div class="block-text white">
-            <p class="block-title">Dress like the best</p>
-            <p class="block-subtitle">Shop our latest apparel</p>
-          </div>
-          <div class="button regal-blue store">Shop now</div>
-        </div>
-        <div class="blank-divider"></div>
-        <div class="block block-align-right partners block-partners-image ">
-          <div class="block-text white">
-            <p class="block-title">Our partners</p>
-            <p class="block-subtitle">See what keeps us running</p>
-          </div>
-          <div class="button regal-blue partners">See more</div>
-        </div>
-      </div>
+        <?php require_once 'includes/getIndexItems.php'; ?>
+      
 
       <!-- twitch stream -->
 
@@ -107,11 +82,7 @@
       <img class="logo-text" src="css/logo_text.png" alt="logo">
       <p class="white">We are Gaming. We are Royal. We are Regal.</p>
       <div class="horizontal-divider"></div>
-      <div class="socials">
-        <img src="css/twitter.png" class="social-icon twitter" alt="social-icon">
-        <img src="css/mail.png" class="social-icon mail" alt="social-icon">
-        <img src="css/yt.png" class="social-icon yt" alt="social-icon">
-      </div>
+      <?php require_once 'includes/getSocials.php'; ?>
     </footer>
 
     <!-- Load the Twitch embed script -->

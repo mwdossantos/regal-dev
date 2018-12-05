@@ -1,4 +1,5 @@
 <?php
+require 'checkSession.php';
 
 include 'parsedown.php';
 include 'chromeLogger.php';
@@ -15,6 +16,8 @@ $title = $_POST['title'];
 $public = $_POST['public'];
 $body = $_POST['body'];
 $author = $_POST['author'];
+$headlineImage = $_POST['headlineImage'];
+
 //$newsImage = $_POST['newsImage'];
 $date = date("l") . " " . date("F") . " " . date("w") . ", " .  date("Y") . ".";
 
@@ -22,6 +25,19 @@ if (!isset($title) && !isset($public) && !isset($body) && !isset($author)) {
     echo false;
     exit;
 }
+
+if (!isset($headlineImage)) {
+    $headlineImage = "css/news.JPG";
+} else {
+    //find the headline image 
+    foreach ($newsData->images as $image) {
+        $imageWithoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $image);
+        if ($imageWithoutExt == $headlineImage) {
+            $headlineImage = $image;
+        }
+    }
+}
+
 
 $imageNames = getStringsBetween($body, 'img[', ']img');
 
@@ -52,7 +68,7 @@ $article = (object) [
     'title' => $title,
     'body' => $parsedBody,
     'date' => $date,
-    'newsImage' => "css/news.JPG",
+    'newsImage' => $headlineImage,
     'author' => $author
 ];
 

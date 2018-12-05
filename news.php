@@ -60,11 +60,8 @@
       <img class="logo-text" src="css/logo_text.png" alt="logo">
       <p class="white">We are Gaming. We are Royal. We are Regal.</p>
       <div class="horizontal-divider"></div>
-      <div class="socials">
-        <img src="css/twitter.png" class="social-icon twitter" alt="social-icon">
-        <img src="css/mail.png" class="social-icon mail" alt="social-icon">
-        <img src="css/yt.png" class="social-icon yt" alt="social-icon">
-      </div>
+      <?php require_once 'includes/getSocials.php'; ?>
+
     </footer>
 
     <!-- jQuery -->

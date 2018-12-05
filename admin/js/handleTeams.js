@@ -25,7 +25,7 @@ $(document).ready(function() {
               "name": $('#team-image-name').val()
             };
         },
-        extFilter: ["jpg", "jpeg", "png", "gif"],
+        extFilter: ["jpg", "jpeg", "png", "gif", "JPG", "JPEG", "PNG", "GIF"],
         onInit: function(){
         },
         onUploadComplete: function () {
@@ -97,3 +97,40 @@ $(document).ready(function() {
       });
 
 }); 
+
+function deleteTeam(id) {
+
+    $.ajax({
+         type: "POST",
+         url: 'includes/deleteTeam.php',
+         data: {
+           id: id,
+         },
+         success:function(data) {
+            if (data == 1) {
+                location.reload();
+            } else {
+                alert("Something went wrong, please check if you filled in all fields.");
+            }
+         }
+    });
+}
+
+function deleteTeamMember(teamId, playerId) {
+
+    $.ajax({
+         type: "POST",
+         url: 'includes/deleteTeamMember.php',
+         data: {
+           teamId: teamId,
+           playerId: playerId,
+         },
+         success:function(data) {
+            if (data == 1) {
+                location.reload();
+            } else {
+                alert("Something went wrong, please check if you filled in all fields.");
+            }
+         }
+    });
+}

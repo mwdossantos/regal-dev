@@ -1,4 +1,7 @@
 <?php
+
+require 'checkSession.php';
+
 $staffsFile = "../data/staffs.json";
 $jsondata = file_get_contents($staffsFile);
 $staffData = json_decode($jsondata);

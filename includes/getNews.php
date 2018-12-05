@@ -5,7 +5,7 @@
     $newsFile = "data/news.json";
     $jsondata = file_get_contents($newsFile);
     $newsData = json_decode($jsondata);
-    $newsHTML;
+    $newsHTML = "";
 
     if (empty($newsData->articles)) {
         // Start building up the HTML
@@ -26,7 +26,7 @@
                 $newsHTML .= '<div class="news-item">';
     
                 // Image
-                $newsHTML .= '<div style="background-image:url('.$newsItem->newsImage.')!important" class="news-image teamwin"></div>';
+                $newsHTML .= '<div style="background-image:url(newsImages/'.$newsItem->newsImage.')!important" class="news-image teamwin"></div>';
                 $newsHTML .= '<div class="news-content">';
     
                 // Title

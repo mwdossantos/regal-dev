@@ -1,4 +1,7 @@
 <?php
+
+require 'checkSession.php';
+
 $path = "../../newsImages/";
 
 $newsFile = "../../data/news.json";
@@ -9,7 +12,12 @@ $valid_formats = array(
     "png",
     "gif",
     "bmp",
-    "jpeg"
+    "jpeg",
+    "JPEG",
+    "JPG",
+    "PNG",
+    "GIF",
+    "BMP"
 );
 
 if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {

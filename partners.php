@@ -47,17 +47,7 @@
       <!-- partners -->
       <div class="team-row">
         <div class="team-container">
-          <div class="team-item partner-item aporia">
-            <img src="css/aporia.png" alt="partnerlogo">
-          </div>
-          <div class="blank-divider-horizontal"></div>
-          <div class="team-item partner-item aukey">
-            <img src="css/aukey-logo.png" style="filter:invert(1)" alt="partnerlogo">
-          </div>
-          <div class="blank-divider-horizontal"></div>
-          <div class="team-item partner-item perform">
-            <img src="css/perform-logo.png" alt="partnerlogo">
-          </div>
+          <?php require_once 'includes/getPartners.php'; ?>
         </div>
 
       </div>
@@ -73,11 +63,8 @@
       <img class="logo-text" src="css/logo_text.png" alt="logo">
       <p class="white">We are Gaming. We are Royal. We are Regal.</p>
       <div class="horizontal-divider"></div>
-      <div class="socials">
-        <img src="css/twitter.png" class="social-icon twitter" alt="social-icon">
-        <img src="css/mail.png" class="social-icon mail" alt="social-icon">
-        <img src="css/yt.png" class="social-icon yt" alt="social-icon">
-      </div>
+      <?php require_once 'includes/getSocials.php'; ?>
+
     </footer>
 
     <!-- jQuery -->

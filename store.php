@@ -45,76 +45,7 @@
 
     <main>
 
-      <!-- promo -->
-      <div class="promo-row">
-        <div class="promo promo-img"></div>
-      </div>
-
-      <h2 class="white big-title store-title">New apparel</h2>
-
-      <div class="store-items-row mobile-edit">
-        <div class="store-item-container">
-          <div class="store-card hoodie">
-            <div class="button regal-blue">View on Aporia</div>
-          </div>
-          <p class="store-card-title white">Hoodie</p>
-          <p class="store-card-price white">$ 74.95</p>
-        </div>
-
-        <div class="blank-divider"></div>
-
-        <div class="store-item-container">
-          <div class="store-card hoodie2">
-            <div class="button regal-blue">View on Aporia</div>
-          </div>
-          <p class="store-card-title white">Hoodie</p>
-          <p class="store-card-price white">$ 74.95</p>
-        </div>
-
-        <div class="blank-divider"></div>
-
-        <div class="store-item-container">
-          <div class="store-card hoodie">
-            <div class="button regal-blue">View on Aporia</div>
-          </div>
-          <p class="store-card-title white">Hoodie</p>
-          <p class="store-card-price white">$ 74.95</p>
-        </div>
-
-      </div>
-
-      <div class="store-items-row">
-        <div class="store-item-container">
-          <div class="store-card hoodie2">
-            <div class="button regal-blue">View on Aporia</div>
-          </div>
-          <p class="store-card-title white">Hoodie</p>
-          <p class="store-card-price white">$ 74.95</p>
-        </div>
-      </div>
-
-      <h2 class="white big-title">Classics</h2>
-
-      <div class="store-items-row mobile-edit">
-        <div class="store-item-container grow-2">
-          <div class="store-card hoodie">
-            <div class="button regal-blue">View on Aporia</div>
-          </div>
-          <p class="store-card-title white">Hoodie</p>
-          <p class="store-card-price white">$ 74.95</p>
-        </div>
-
-        <div class="blank-divider"></div>
-
-        <div class="store-item-container">
-          <div class="store-card hoodie2">
-            <div class="button regal-blue">View on Aporia</div>
-          </div>
-          <p class="store-card-title white">Hoodie</p>
-          <p class="store-card-price white">$ 74.95</p>
-        </div>
-
-      </div>
+    <?php require_once 'includes/getStore.php'; ?>
 
     </main>
 
@@ -127,11 +58,8 @@
       <img class="logo-text" src="css/logo_text.png" alt="logo">
       <p class="white">We are Gaming. We are Royal. We are Regal.</p>
       <div class="horizontal-divider"></div>
-      <div class="socials">
-        <img src="css/twitter.png" class="social-icon twitter" alt="social-icon">
-        <img src="css/mail.png" class="social-icon mail" alt="social-icon">
-        <img src="css/yt.png" class="social-icon yt" alt="social-icon">
-      </div>
+      <?php require_once 'includes/getSocials.php'; ?>
+
     </footer>
 
     <!-- jQuery -->

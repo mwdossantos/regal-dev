@@ -25,7 +25,7 @@ $(document).ready(function() {
               "name": $('#staff-image-name').val()
             };
         },
-        extFilter: ["jpg", "jpeg", "png", "gif"],
+        extFilter: ["jpg", "jpeg", "png", "gif", "JPG", "JPEG", "PNG", "GIF"],
         onInit: function(){
         },
         onUploadComplete: function () {
@@ -70,3 +70,41 @@ $(document).ready(function() {
       });
 
 }); 
+
+
+function deleteStaffGroup(id) {
+
+    $.ajax({
+         type: "POST",
+         url: 'includes/deleteStaffGroup.php',
+         data: {
+           id: id,
+         },
+         success:function(data) {
+            if (data == 1) {
+                location.reload();
+            } else {
+                alert("Something went wrong, please check if you filled in all fields.");
+            }
+         }
+    });
+}
+
+function deleteStaffMember(teamId, playerId) {
+
+    $.ajax({
+         type: "POST",
+         url: 'includes/deleteStaffMember.php',
+         data: {
+           teamId: teamId,
+           playerId: playerId,
+         },
+         success:function(data) {
+            if (data == 1) {
+                location.reload();
+            } else {
+                alert("Something went wrong, please check if you filled in all fields.");
+            }
+         }
+    });
+}

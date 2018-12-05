@@ -1,3 +1,7 @@
+<?php 
+    require 'includes/checkSession.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +13,7 @@
     <script src="js/fileUploader.js"></script>
     <script src="js/handleNewsArticles.js"></script>
     <!-- Include the required files -->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
@@ -19,6 +24,8 @@
         <a href="news.php">News</a>
         <a href="team.php">Team</a>
         <a href="staff.php">Staff</a>
+        <a href="store.php">Store</a>
+        <a href="partners.php">Partners</a>
     </nav>
 
     <div style="display: flex; flex-direction: column; width: 60%;">
@@ -38,7 +45,9 @@
         <br>
 
         <!--TITLE-->
-        <input id="news-title" type="text" placeholder="Title">
+        <input id="news-headlineImage" type="text" placeholder="Headline image (Can be left empty for default image)"><br><br>
+
+        <input id="news-title" type="text" placeholder="Article title">
         <br>
         <!--BODY-->
         <textarea id="news-body" cols="30" rows="10" placeholder="Article"></textarea>
@@ -57,6 +66,12 @@
         <br>
         <button onclick="saveNewsArticle()">Save news aricle</button>
 
+    </div>
+
+
+    <div style="display: flex; flex-direction: column; width: 60%;">
+        <h3>Delete news articles</h3>
+        <?php require_once 'includes/getNews.php'; ?>
     </div>
 </body>
 </html>

@@ -1,4 +1,7 @@
 <?php
+
+require 'checkSession.php';
+
 $teamsFile = "../data/teams.json";
 $jsondata = file_get_contents($teamsFile);
 $teamData = json_decode($jsondata);
