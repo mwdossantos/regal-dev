@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
   </head>
   <body>
-
+ 
     <header>
         <div class="left-header-container">
           <img src="css/logo.png" class="home" alt="logo">
