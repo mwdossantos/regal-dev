@@ -45,7 +45,7 @@
         <br>
 
         <!--TITLE-->
-        <input id="news-headlineImage" type="text" placeholder="Headline image (Can be left empty for default image)"><br><br>
+        <input id="news-headlineImage" type="text" placeholder="Headline image"><br><br>
 
         <input id="news-title" type="text" placeholder="Article title">
         <br>

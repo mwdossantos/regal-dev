@@ -84,7 +84,7 @@ function saveNewsArticle () {
     const author = $('#news-author').val();
     const headlineImage = $('#news-headlineImage').val();
 
-    if (title == ""|| public == "" || body == ""|| author == "") {
+    if (title == ""|| public == "" || body == ""|| author == "" || headlineImage == "") {
         return alert("Please make sure you filled in all fields");
     }
 
