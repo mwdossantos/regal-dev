@@ -15,17 +15,17 @@ if (empty($data->articles)) {
   $html .= '
   <table style="width:100%">
     <tr>
-      <th>Titel</th>
+      <th>Title</th>
       <th>Delete</th>
     </tr>
   ';
 }
 
 foreach ($data->articles as $key => $article) {
-    $html .= '  
+    $html .= '
     <tr>
     <td>'.$article->title.'</td>
-    <td style="background-color: rgba(255,0,0,0.4)" onclick="deleteArticle('.$key.')">Verwijder</td>
+    <td style="background-color: rgba(255,0,0,0.4)" onclick="deleteArticle('.$key.')">Delete post</td>
     </tr>
     ';
 }
@@ -33,4 +33,4 @@ foreach ($data->articles as $key => $article) {
 $html .= '</table>';
 
 echo $html;
-?> 
+?>

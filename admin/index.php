@@ -1,4 +1,4 @@
-<?php 
+<?php
     require 'includes/checkSession.php';
 ?>
 
@@ -14,20 +14,25 @@
     <script src="js/handleNewsArticles.js"></script>
     <!-- Include the required files -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/queries.css" type="text/css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
 </head>
 <body>
     <nav>
-        <a href="index.php">Home</a>
+      <img src="css/CMSquad.png">
+      <div class="nav-container">
+        <a href="index.php" class="active">Home</a>
         <a href="news.php">News</a>
         <a href="team.php">Team</a>
         <a href="staff.php">Staff</a>
         <a href="store.php">Store</a>
         <a href="partners.php">Partners</a>
+        <a href="#" style="color:#00A8E7; margin-left:40px;">View website</a>
+        <a href="#" style="color:#FF1943; margin-left:40px;">Log out</a>
+      </div>
     </nav>
-
-
 </body>
 </html>

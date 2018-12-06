@@ -1,4 +1,4 @@
-<?php 
+<?php
     require 'includes/checkSession.php';
 ?>
 
@@ -14,63 +14,58 @@
     <script src="js/handleNewsArticles.js"></script>
     <!-- Include the required files -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/queries.css" type="text/css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
 </head>
 <body>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="news.php">News</a>
-        <a href="team.php">Team</a>
-        <a href="staff.php">Staff</a>
-        <a href="store.php">Store</a>
-        <a href="partners.php">Partners</a>
-    </nav>
+  <nav>
+    <img src="css/CMSquad.png">
+    <div class="nav-container">
+      <a href="index.php">Home</a>
+      <a href="news.php" class="active">News</a>
+      <a href="team.php">Team</a>
+      <a href="staff.php">Staff</a>
+      <a href="store.php">Store</a>
+      <a href="partners.php">Partners</a>
+      <a href="#" style="color:#00A8E7; margin-left:40px;">View website</a>
+      <a href="#" style="color:#FF1943; margin-left:40px;">Log out</a>
+    </div>
+  </nav>
 
-    <div style="display: flex; flex-direction: column; width: 60%;">
-        <h3>Create new news post</h3>
+    <div class="field-container">
+        <h3>Create news post</h3>
 
         <!--IMAGE UPLOAD-->
 
         <h4>Add images, one at the time</h4>
-        <input style="width: 300px;" id="image-name" type="text" placeholder="Image name as used in article"><br>
+        <input style="width: 300px;" id="image-name" type="text" placeholder="Image name as used in article">
 
         <div style="display:none" id="drop-area" style="border: 1px solid black;">
             <h3>Drag and Drop images Here</h3>
             <input type="file" title="Click to add Files"><br><br>
-        </div> 
+        </div>
         <div style="display:none" id="uploaded-images-div"><p>Uploaded images</p><ul id="uploaded-images"></ul></div>
 
-        <br>
-
         <!--TITLE-->
-        <input id="news-headlineImage" type="text" placeholder="Headline image"><br><br>
+        <input id="news-headlineImage" type="text" placeholder="Headline image - name of image specified above">
 
         <input id="news-title" type="text" placeholder="Article title">
-        <br>
         <!--BODY-->
         <textarea id="news-body" cols="30" rows="10" placeholder="Article"></textarea>
 
-        <br>
         <!--AITHOR-->
         <input id="news-author" type="text" placeholder="Author">
-        <br>
-        
-        <!--PRIVACY-->
-        <p>Public?</p>
-        <select id="news-privacy">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-        </select>
-        <br>
-        <button onclick="saveNewsArticle()">Save news aricle</button>
+
+
+        <button onclick="saveNewsArticle()">Publish news article</button>
 
     </div>
 
 
-    <div style="display: flex; flex-direction: column; width: 60%;">
-        <h3>Delete news articles</h3>
+    <div class="remove-container">
         <?php require_once 'includes/getNews.php'; ?>
     </div>
 </body>
