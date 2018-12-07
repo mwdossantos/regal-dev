@@ -7,13 +7,14 @@ include 'chromeLogger.php';
 $Parsedown = new Parsedown();
 
 $path = "../../newsImages/";
-
+if (!file_exists($path)) {
+    mkdir($path, 0777, true);
+}
 $newsFile = "../../data/news.json";
 $jsondata = file_get_contents($newsFile);
 $newsData = json_decode($jsondata);
 
 $title = $_POST['title'];
-$public = $_POST['public'];
 $body = $_POST['body'];
 $author = $_POST['author'];
 $headlineImage = $_POST['headlineImage'];
@@ -21,7 +22,7 @@ $headlineImage = $_POST['headlineImage'];
 //$newsImage = $_POST['newsImage'];
 $date = date("l") . " " . date("F") . " " . date("w") . ", " .  date("Y") . ".";
 
-if (!isset($title) && !isset($public) && !isset($body) && !isset($author)) {
+if (!isset($title) && !isset($body) && !isset($author)) {
     echo false;
     exit;
 }
@@ -44,14 +45,11 @@ $imageNames = getStringsBetween($body, 'img[', ']img');
 // Replace the custom image tags with actual HTML images
 foreach ($imageNames as $imageName) {
     # code...
-    ChromePhp::Log("Trying to find an image");
     foreach ($newsData->images as $image) {
         # code...
-        ChromePhp::Log("Trying to find an image 2");
 
         $imageWithoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $image);
         if ($imageWithoutExt == $imageName) {
-            ChromePhp::Log("Found an image");
 
             $body = str_replace_first("img[","<img class='news-content-image' alt='$imageName' src='newsImages/".$image."'",$body);
             $body = str_replace_first("]img","/>",$body);
@@ -64,7 +62,6 @@ $parsedBody = $Parsedown->text($body);
 
 // Create the article object
 $article = (object) [
-    'public' => $public,
     'title' => $title,
     'body' => $parsedBody,
     'date' => $date,
@@ -72,7 +69,6 @@ $article = (object) [
     'author' => $author
 ];
 
-ChromePhp::Log($article);
 
 // Push the new article to the array
 array_push($newsData->articles, $article);

@@ -4,7 +4,9 @@ require 'checkSession.php';
 
 $path = "../../teamImages/";
 include 'chromeLogger.php';
-
+if (!file_exists($path)) {
+    mkdir($path, 0777, true);
+}
 $teamsFile = "../../data/teams.json";
 $jsondata = file_get_contents($teamsFile);
 $nameGiven = $_POST['name'];
@@ -27,47 +29,48 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
     $name = $_FILES['file']['name'];
     $size = $_FILES['file']['size'];
 
-    if (strlen($name)) {
+    if ($size < 50000000) {
+        if (strlen($name)) {
 
-        list($txt, $ext) = explode(".", $name);
-        if (in_array($ext, $valid_formats)) {
-
-                $actual_image_name = $imageName . "." . $ext;
-                $tmp = $_FILES['file']['tmp_name'];
-                if (move_uploaded_file($tmp, $path . $actual_image_name)) {
-
-                    // converts json data into array
-                    $teamsData = json_decode($jsondata);
-
-                    // Create the article object
-                    $team = (object) [
-                        'title' => $nameGiven,
-                        'image' => $actual_image_name,
-                        'logo' => "",
-                        'members' => (array) [
-
-                        ]
-                    ];
-
-                    ChromePhp::Log($team);
-
-                    // Push the new article to the array
-                    array_push($teamsData->teams, $team);
-
-                    $jsondata = json_encode($teamsData, JSON_PRETTY_PRINT);
-	   
-                    //write json data into data.json file
-                    if(file_put_contents($teamsFile, $jsondata)) {
-                         echo true;
-                    } else {
-                        echo "Image could not be uploaded.";
-                    }
-                } else
-                    echo "failed";
+            list($txt, $ext) = explode(".", $name);
+            if (in_array($ext, $valid_formats)) {
+    
+                    $actual_image_name = $imageName . "." . $ext;
+                    $tmp = $_FILES['file']['tmp_name'];
+                    if (move_uploaded_file($tmp, $path . $actual_image_name)) {
+    
+                        // converts json data into array
+                        $teamsData = json_decode($jsondata);
+    
+                        // Create the article object
+                        $team = (object) [
+                            'title' => $nameGiven,
+                            'image' => $actual_image_name,
+                            'logo' => "",
+                            'members' => (array) [
+    
+                            ]
+                        ];
+    
+                        // Push the new article to the array
+                        array_push($teamsData->teams, $team);
+    
+                        $jsondata = json_encode($teamsData, JSON_PRETTY_PRINT);
+           
+                        //write json data into data.json file
+                        if(file_put_contents($teamsFile, $jsondata)) {
+                             echo true;
+                        } else {
+                            echo false;
+                        }
+                    } else
+                        echo false;
+            } else
+                echo false;
         } else
-            echo "Invalid file format..";
-    } else
-        echo "Please select image..!";
-    exit;
+            echo false;
+        exit;
+    }
+
 }
 ?>

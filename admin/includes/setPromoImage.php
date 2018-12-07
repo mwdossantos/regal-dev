@@ -4,7 +4,9 @@ require 'checkSession.php';
 
 $path = "../../apperalImages/";
 include 'chromeLogger.php';
-
+if (!file_exists($path)) {
+    mkdir($path, 0777, true);
+}
 $file = "../../data/store.json";
 $jsondata = file_get_contents($file);
 $imageName = "promo";
@@ -25,6 +27,8 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
 
     $name = $_FILES['file']['name'];
     $size = $_FILES['file']['size'];
+
+    if ($size < 50000000) {
 
     if (strlen($name)) {
 
@@ -56,5 +60,6 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
     } else
         echo "Please select image..!";
     exit;
+}
 }
 ?>

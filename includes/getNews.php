@@ -17,9 +17,6 @@
     } else {
         foreach ($newsData->articles as $key => $newsItem) {
 
-            if ($newsItem->public == true) {
-    
-                ChromePhp::log($newsData);
     
                 // Start building up the HTML
                 $newsHTML .= '<div class="news-row">';
@@ -56,7 +53,6 @@
                     <div class="dot"></div>
                     </div>';
                 }
-            }
     
         }
     }

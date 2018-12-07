@@ -11,11 +11,9 @@ $teamId = $_POST['teamId'];
 $memberId = $_POST['playerId'];
 
 if (!isset($teamId) || !isset($memberId)) {
-ChromePhp::Log("Sup");
     echo false;
     exit;
 }
-ChromePhp::Log("Sup");
 array_splice($data->staffs[$teamId]->members, $memberId, 1);
 
 $jsondata = json_encode($data, JSON_PRETTY_PRINT);

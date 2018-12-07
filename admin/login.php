@@ -22,7 +22,7 @@
       opacity: 0.3;
       margin-top: 80px;
       font-size: 12px;
-    ">All rights reserved - <a style="margin-left:0px; color:black;"href="https://github.com/mwdossantos">Matthew Wilson</a></p>
+    ">All rights reserved - <a style="margin-left:0px; color:black;"href="https://github.com/mwdossantos">Matthew Wilson & firewarm</a></p>
   </div>
 
 </body>

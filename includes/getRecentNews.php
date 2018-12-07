@@ -19,16 +19,14 @@
         
         foreach ($newsData->articles as $key => $newsItem) {
 
-            if ($newsItem->public == true) {
-                $newsHTML .= '
-                <div class="swiper-slide">
-                    <div class="swiper-slide-container" style="background-image: url(newsImages/'.$newsItem->newsImage.')">
-                    <p class="swiper-title">'.$newsItem->title.'</p>
-                    <div class="button regal-blue">Read more</div>
-                    </div>
+            $newsHTML .= '
+            <div class="swiper-slide">
+                <div class="swiper-slide-container" style="background-image: url(newsImages/'.$newsItem->newsImage.')">
+                <p class="swiper-title">'.$newsItem->title.'</p>
+                <div class="button regal-blue">Read more</div>
                 </div>
-                ';
-            }
+            </div>
+            ';
         }
     }
 

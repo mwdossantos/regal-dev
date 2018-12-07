@@ -4,7 +4,9 @@ require 'checkSession.php';
 
 $path = "../../staffImages/";
 include 'chromeLogger.php';
-
+if (!file_exists($path)) {
+    mkdir($path, 0777, true);
+}
 $staffsFile = "../../data/staffs.json";
 $jsondata = file_get_contents($staffsFile);
 $nameGiven = $_POST['name'];
@@ -27,6 +29,7 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
     $name = $_FILES['file']['name'];
     $size = $_FILES['file']['size'];
 
+    if ($size < 50000000) {
     if (strlen($name)) {
 
         list($txt, $ext) = explode(".", $name);
@@ -46,7 +49,6 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
                         'members' => (array) []
                     ];
 
-                    ChromePhp::Log($staff);
 
                     // Push the new article to the array
                     array_push($staffsData->staffs, $staff);
@@ -55,16 +57,17 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
 	   
                     //write json data into data.json file
                     if(file_put_contents($staffsFile, $jsondata)) {
-                         echo true;
+                        echo true;
                     } else {
-                        echo "Image could not be uploaded.";
+                        echo false;
                     }
                 } else
-                    echo "failed";
+                    echo false;
         } else
-            echo "Invalid file format..";
+            echo false;
     } else
-        echo "Please select image..!";
+        echo false;
     exit;
+}
 }
 ?>

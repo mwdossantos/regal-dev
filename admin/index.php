@@ -30,9 +30,9 @@
         <a href="staff.php">Staff</a>
         <a href="store.php">Store</a>
         <a href="partners.php">Partners</a>
-        <a href="#" style="color:#00A8E7; margin-left:40px;">View website</a>
-        <a href="#" style="color:#FF1943; margin-left:40px;">Log out</a>
-      </div>
+        <a href="../index" style="color:#00A8E7; margin-left:40px;">View website</a>
+      <a href="includes/logout.php" style="color:#FF1943; margin-left:40px;">Log out</a>
+    </div>
     </nav>
 </body>
 </html>

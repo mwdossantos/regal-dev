@@ -21,8 +21,8 @@ function listener() {
   $('.staff').click(function() {
     navigator('staff',"_self");
   })
-  $('.staff').click(function() {
-    navigator('staff',"_self");
+  $('.partners').click(function() {
+    navigator('partners',"_self");
   })
   $('.mail').click(function() {
     navigator('mailto:andrew@theregalreserve.co',"_self");
