@@ -35,6 +35,7 @@ $valid_formats = array(
 if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
 
     $name = $_FILES['file']['name'];
+    $name = fixFileName($name);
     $size = $_FILES['file']['size'];
     if ($size < 50000000) {
 
@@ -68,7 +69,7 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
                     // Push the new article to the array
 
                     $jsondata = json_encode($staffsData, JSON_PRETTY_PRINT);
-	   
+
                     //write json data into data.json file
                     if(file_put_contents($staffsFile, $jsondata)) {
                          echo true;
@@ -83,5 +84,19 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
         echo "Please select image..!";
     exit;
 }
+}
+
+
+function fixFileName ($imagen) {
+  $filename=pathinfo($imagen,PATHINFO_FILENAME);
+  $ext=pathinfo($imagen,PATHINFO_EXTENSION);
+
+  //replace all these characters with an hyphen
+  $repar=array(".",","," ",";","'","\\","\"","/","(",")","?");
+
+  $repairedfilename=str_replace($repar,"-",$filename);
+  $cleanfilename=$repairedfilename.".".strtolower($ext);
+
+  return $cleanfilename;
 }
 ?>
