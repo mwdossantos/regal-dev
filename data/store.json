@@ -1,16 +1,5 @@
 {
     "groups": [
-        {
-            "title": "ghsfgsdfsf",
-            "items": [
-                {
-                    "name": "dsfgdsfg",
-                    "image": "dsfgdsfg.jpg",
-                    "price": "34213",
-                    "url": "dasdadad"
-                }
-            ]
-        }
     ],
     "options": {
         "promoImage": "promo.jpg"
