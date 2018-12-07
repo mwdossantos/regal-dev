@@ -1,4 +1,17 @@
 {
     "staffs": [
+        {
+            "title": "Executives",
+            "image": "Executives.jpg",
+            "members": [
+                {
+                    "name": "Andrew",
+                    "image": "Andrew.png",
+                    "twitterHandle": "@MindofAndrew",
+                    "emailHandle": "andrew@theregalreserve.co",
+                    "youtubeHandle": "https:\/\/www.youtube.com\/user\/teamAeRa"
+                }
+            ]
+        }
     ]
 }

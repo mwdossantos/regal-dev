@@ -1,3 +1,22 @@
 {
-    "partners": []
+    "partners": [
+        {
+            "title": "Aporia",
+            "url": "https:\/\/aporiacustoms.com\/",
+            "image": "Aporia.png",
+            "logo": "Aporia.png"
+        },
+        {
+            "title": "Aukey",
+            "url": "https:\/\/www.aukey.com\/",
+            "image": "Aukey.jpg",
+            "logo": "Aukey.png"
+        },
+        {
+            "title": "Perform GG",
+            "url": "https:\/\/www.beaperformer.com\/",
+            "image": "PerformGG.jpg",
+            "logo": "PerformGG.png"
+        }
+    ]
 }

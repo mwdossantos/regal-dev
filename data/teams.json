@@ -1,4 +1,32 @@
 {
     "teams": [
+        {
+            "title": "Streamers",
+            "image": "Streamers.jpg",
+            "logo": "Streamers.png",
+            "members": [
+                {
+                    "name": "Salvayas",
+                    "image": "Salvayas.jpg",
+                    "twitterHandle": "@Salvayas_",
+                    "emailHandle": "#",
+                    "youtubeHandle": "#"
+                }
+            ]
+        },
+        {
+            "title": "Fortnite",
+            "image": "Fortnite.jpg",
+            "logo": "Fortnite.png",
+            "members": [
+                {
+                    "name": "Icy",
+                    "image": "Icy.jpg",
+                    "twitterHandle": "@IcyBandzz",
+                    "emailHandle": "#",
+                    "youtubeHandle": "#"
+                }
+            ]
+        }
     ]
 }

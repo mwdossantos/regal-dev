@@ -40,7 +40,7 @@
 
         <!--IMAGE UPLOAD-->
 
-        <h4>(Step 1). Set the name of the game here (eg: fortnite, csgo)</h4>
+        <h4>(Step 1). Set the name of the game here (eg: Fortnite, CS:GO)</h4>
         <input style="width: 300px;" id="team-image-name" type="text" placeholder="Image name as used as team header">
 
         <div style="display:none" id="drop-area-team" style="border: 1px solid black;">

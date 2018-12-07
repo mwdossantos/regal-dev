@@ -1,5 +1,16 @@
 {
     "groups": [
+        {
+            "title": "Hoodies",
+            "items": [
+                {
+                    "name": "White hoodie",
+                    "image": "Whitehoodie.jpg",
+                    "price": "74.95",
+                    "url": "#"
+                }
+            ]
+        }
     ],
     "options": {
         "promoImage": "promo.jpg"

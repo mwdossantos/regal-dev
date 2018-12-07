@@ -16,6 +16,7 @@
 
 .team-item img {
   width: 150px;
+  filter: none!important;
 }
 
 .team-item:hover {

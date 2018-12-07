@@ -37,9 +37,9 @@
 
     <div class="field-container">
 
-        <h3>Set the store promo image</h3>
+        <h3>Set the store promo image (Also shows on the home page!)</h3>
         <div id="drop-area-promo" style="border: 1px solid black; padding: 10px;">
-            <h4>Drag and drop a the promo image here.</h4>
+            <h4>Drag and drop the promo image here.</h4>
             <p style="display:none" id="percentage-promo"></p>
             <input type="file" title="Click to select image">
         </div>
@@ -48,11 +48,11 @@
 
     <div  class="field-container">
 
-        <h3>Create a new apperal group</h3>
+        <h3>Create a new apparel group</h3>
 
-        <h4>Pick a name for the apperal group (eg. New apperal, Classics)</h4>
+        <h4>Pick a name for the apparel group (eg. New apparel, Classics)</h4>
         <input style="width: 300px;" id="group-name" type="text" placeholder="Apperal group name">
-        <button onclick="saveApperalGroup()">Save apperal group</button>
+        <button onclick="saveApperalGroup()">Save apparel group</button>
 
     </div>
 
@@ -62,12 +62,12 @@
     </div>
 
     <div class="field-container">
-        <h3>Delete apperal group</h3>
+        <h3>Delete apparel group</h3>
         <?php require_once 'includes/getApperalGroupsToDelete.php'; ?>
     </div>
 
     <div class="field-container">
-        <h3>Delete apperal item</h3>
+        <h3>Delete apparel item</h3>
         <?php require_once 'includes/getApperalItems.php'; ?>
     </div>
 
